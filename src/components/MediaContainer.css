@@ -1,0 +1,14 @@
+.single-image{
+    width: 223px;
+    height: 167px;
+    max-width: none;
+    max-height: none;
+    float: left;
+    overflow: hidden;
+}
+
+.media-wrapper{
+    margin: 5px 0 16px 0px;
+    padding: auto;
+    padding-bottom: 10px;
+}
