@@ -3,48 +3,48 @@ import FeedHandle from "./FeedHandle";
 import MediaContainer from "./MediaContainer";
 import "./SocialCard.css";
 // import ReactHashtag from "react-hashtag";
-import TextStyler from "./TextStyler";
+// import TextStyler from "./TextStyler";
+import TextContainer from "./TextContainer";
 
-function TextContainer({ children, maxCharCount = 140 }) {
-	const text = children;
-	const [isTruncated, setIsTruncated] = useState(true);
-	if (text.length <= maxCharCount) {
-		return (
-			<TextStyler
-				exp={/([@][^\s]+|[#|＃][^\s]+[#|＃])/g}
-				// exp={/([#|＃][^\s]+[#|＃])/g}
-				renderHashtag={(hashtagValue) => <a className="tag">{hashtagValue}</a>}
-			>
-				{text}
-			</TextStyler>
-		);
-	} else {
-		var resultString = isTruncated
-			? text.slice(0, maxCharCount).concat(" ...")
-			: text;
+// function TextContainer({ children, maxCharCount = 140 }) {
+// 	const text = children;
+// 	const [isTruncated, setIsTruncated] = useState(true);
+// 	if (text.length <= maxCharCount) {
+// 		return (
+// 			<TextStyler
+// 				exp={/([@][^\s]+|[#|＃][^\s]+[#|＃])/g} //Regex for Hashtags and @tags
+// 				renderHashtag={(hashtagValue) => <a className="tag">{hashtagValue}</a>}
+// 			>
+// 				{text}
+// 			</TextStyler>
+// 		);
+// 	} else {
+// 		var resultString = isTruncated
+// 			? text.slice(0, maxCharCount).concat(" ...")
+// 			: text;
 
-		function toggleTruncated() {
-			setIsTruncated(!isTruncated);
-		}
+// 		function toggleTruncated() {
+// 			setIsTruncated(!isTruncated);
+// 		}
 
-		return (
-			<div>
-				<TextStyler
-					renderHashtag={(hashtagValue) => (
-						<span className="tag">{hashtagValue}</span>
-					)}
-				>
-					{resultString}
-				</TextStyler>
-				<span onClick={toggleTruncated} className="tag">
-					{" "}
-					{isTruncated ? "展开全文" : "收起全文"}
-					<i className={isTruncated ? "angle down icon" : "angle up icon"}></i>
-				</span>
-			</div>
-		);
-	}
-}
+// 		return (
+// 			<div>
+// 				<TextStyler
+// 					renderHashtag={(hashtagValue) => (
+// 						<span className="tag">{hashtagValue}</span>
+// 					)}
+// 				>
+// 					{resultString}
+// 				</TextStyler>
+// 				<span onClick={toggleTruncated} className="tag">
+// 					{" "}
+// 					{isTruncated ? "展开全文" : "收起全文"}
+// 					<i className={isTruncated ? "angle down icon" : "angle up icon"}></i>
+// 				</span>
+// 			</div>
+// 		);
+// 	}
+// }
 
 class SocialCard extends React.Component {
 	render() {
