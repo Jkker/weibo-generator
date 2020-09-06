@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    "WenQuanYi Micro Hei", sans-serif;
+}
+.side-by-side-viewer{
+  display: flex;
+  background-color: #eeeeee;
+  .feed-viewer-container{
+    margin-left: 54px;
+  }
+}
+.ui-container {
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+.operations-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-card-container {
+  width: 600px;
+  display: flex;
+  .operations {
+    // position: relative;
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    // left: 620px;
+    // top: -30px;
+    > Button{
+      margin: 0.25em;
+    }
+    width: min-content;
+  }
+}

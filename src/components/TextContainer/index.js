@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import TextStyler from "./TextStyler";
-function TextContainer({ children, maxCharCount = 140 }) {
+function TextContainer(props) {
   const exp = /(@[^\s]+|[#|＃][^\s]+[#|＃])/g; //Regex for Hashtags and @tags
-  const text = children;
+  const { text, EditButton } = props,
+    maxCharCount = props.maxCharCount || 140;
   const [isTruncated, setIsTruncated] = useState(true);
   if (text.length <= maxCharCount) {
     return (
@@ -17,6 +18,7 @@ function TextContainer({ children, maxCharCount = 140 }) {
         >
           {text}
         </TextStyler>
+        {EditButton}
       </div>
     );
   } else {
@@ -28,25 +30,22 @@ function TextContainer({ children, maxCharCount = 140 }) {
     };
 
     return (
-      <div className="feed-text">
+      <div className='feed-text'>
         <TextStyler
           exp={exp} //Regex for Hashtags and @tags
           renderHashtag={(hashtagValue) => (
-            <span className="tag" key={hashtagValue}>
+            <span className='tag' key={hashtagValue}>
               {hashtagValue}
             </span>
           )}
         >
           {resultString}
         </TextStyler>
-        <button
-          onClick={toggleTruncated}
-          className="tag button-o"
-          style={{ marginLeft: "5px" }}
-        >
-          {isTruncated ? "展开全文" : "收起全文"}
-          <i className={isTruncated ? "angle down icon" : "angle up icon"}></i>
+        <button onClick={toggleTruncated} className='tag button-o' style={{ marginLeft: '5px' }}>
+          {isTruncated ? '展开全文' : '收起全文'}
+          <i className={isTruncated ? 'angle down icon' : 'angle up icon'}></i>
         </button>
+        {EditButton}
       </div>
     );
   }
