@@ -1,10 +1,10 @@
 import React from "react";
 import FeedHandle from "./FeedHandle";
-import MediaContainer from "./MediaContainer/";
+import MediaContainer from "./MediaContainer";
 import "./SocialCard.scss";
-import TextContainer from "./TextContainer/";
+import TextContainer from "./TextContainer";
 
-class SocialCard extends React.Component {
+class SocialCardEditable extends React.Component {
   render() {
     const { avatarImage, username, dateTime, source, text, media } = this.props.data;
     return (
@@ -42,4 +42,4 @@ class SocialCard extends React.Component {
   }
 }
 
-export default SocialCard;
+export default SocialCardEditable;

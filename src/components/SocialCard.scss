@@ -1,0 +1,91 @@
+.social-card {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 10px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+
+  .feed-content {
+    padding: 20px 20px 4px;
+    background-color: white;
+    overflow: auto;
+    padding-bottom: 10px;
+    .feed-avatar {
+      float: left;
+      position: relative;
+      cursor: pointer;
+      .avatar-image {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+
+    .feed-detail {
+      position: relative;
+      margin-left: 60px;
+      .header {
+        .dropdown {
+          position: absolute;
+          display: block;
+          top: 0px;
+          right: 0px;
+          background-color: transparent;
+          border: none;
+          color: #333;
+        }
+
+        .username {
+          color: #333;
+          display: block;
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: 700;
+          padding-top: 5px;
+          margin-bottom: 7px;
+          /* font-family: ; */
+          /* padding-top: 10px; */
+        }
+      }
+      .feed-info {
+        color: #808080;
+        text-decoration: none;
+        font-size: 12px;
+        height: min-content;
+        line-height: 1.3em;
+        margin-bottom: 2px;
+      }
+    }
+
+    .feed-text {
+      padding: 1px 0 2px;
+      overflow: hidden;
+      line-height: 23px;
+      font-size: 14px;
+      .tag {
+        cursor: pointer;
+        color: #eb7350;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+.button-o {
+  background-color: transparent;
+  font-weight: normal;
+  font-family: Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    "WenQuanYi Micro Hei", sans-serif;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: none;
+  color: #696e78;
+  cursor: pointer;
+  &:hover {
+    color: #eb7350;
+  }
+  :hover {
+    color: #eb7350;
+  }
+}

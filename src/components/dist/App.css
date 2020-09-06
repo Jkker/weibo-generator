@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+
+.ui-container {
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+.operations-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-card-container {
+  width: 600px;
+}
+.social-card-container .operations {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  left: 620px;
+  top: -30px;
+  width: min-content;
+}
+.social-card-container .operations > button {
+  width: 24px;
+  height: 24px;
+}

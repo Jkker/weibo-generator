@@ -1,0 +1,36 @@
+.feed-handle {
+  border-top: 1px solid #f2f2f5;
+  max-height: 39;
+  /* border-top: 1px solid #f2f2f5; */
+  /* margin: -1px 0 0 0; */
+  zoom: 1;
+  background-color: #fff;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  overflow: hidden;
+}
+
+.handleList {
+  list-style: none;
+  margin: 7px 0;
+  padding: auto;
+  li {
+    display: inline-block;
+    height: 22px;
+    width: 25%;
+    line-height: 22px;
+    text-align: center;
+    position: relative;
+    left: -20px;
+
+    font-size: 12px;
+    border-right: 1px solid #d9d9d9;
+    button {
+      color: #696e78;
+    }
+    &:last-child {
+      border-right: none;
+    }
+
+  }
+}

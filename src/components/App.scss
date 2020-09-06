@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    "WenQuanYi Micro Hei", sans-serif;
+}
+// button {
+//   background-color: transparent;
+//   font-weight: normal;
+//   font-family: Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+//     "WenQuanYi Micro Hei", sans-serif;
+//   padding: 0;
+//   border: none;
+//   outline: none;
+//   background-color: none;
+//   color: #696e78;
+//   cursor: pointer;
+//   &:hover {
+//     color: #eb7350;
+//   }
+// }
+
+.ui-container {
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+
+.operations-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-card-container {
+  width: 600px;
+  //   align-self: center;
+  // .close-button {
+  //   position: relative;
+  //   left: 593px;
+  //   top: 11px;
+  //   background-color: transparent;
+  //   border-radius: 50%;
+  //   color: transparent;
+  //   width: 15px;
+  //   height: 15px;
+  //   transition: 0.2s;
+  //   &:hover {
+  //     color: white;
+  //     background-color: red;
+  //     transition: 0.2s;
+  //   }
+  // }
+  .operations {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    left: 620px;
+    top: -30px;
+    width: min-content;
+    > button {
+      // display: inline-flex;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
