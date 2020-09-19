@@ -5,7 +5,7 @@ import FeedHandle from './FeedHandle';
 import MediaContainer from './MediaContainer';
 import './SocialCard.scss';
 import TextContainer from './TextContainer';
-const { Text, Paragraph } = Typography;
+const { Text } = Typography;
 
 class SocialCardEditable extends React.Component {
   state = { editingText: false };
@@ -109,11 +109,6 @@ class SocialCardEditable extends React.Component {
                         type='link'
                         size='small'
                         className='start-feed-text-edit-button'
-                        style={{
-                          
-                          // float: 'right'
-                          // display: this.state.editingText ? 'none' : 'inline',
-                        }}
                         onClick={this.toggleTextEdit}
                       />
                     }
